@@ -1,0 +1,23 @@
+% include("_header.html", title=title)
+
+<form id="frm">
+  <label for="update_user_name">name</label>
+  <input
+    id="update_user_input"
+    name="update_user_name"
+    type="text"
+    mix-check=".{2,20}"
+    placeholder="{{user_name}}"
+  />
+  <button
+    mix-put="/users/{{id}}"
+    mix-data="#frm"
+  >
+    Update user
+  </button>
+</form>
+
+<h1>USER ID: {{id}}</h1>
+<h1 id="the_user_name">USER NAME: {{user_name}}</h1>
+
+% include("_footer.html")

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="/app.css"
+    />
+    <script
+      src="/mixhtml.js"
+      defer
+    ></script>
+    <style>
+            .mix-error {
+              background-image: url(../art.billyraycyrus.gi.jpeg);
+              background-size: 100% 100%;
+      ;
+            }
+
+            .mix-hidden {
+              display: none;
+
+            }
+    </style>
+    <title>{{get('title', 'xxx')}}</title>
+  </head>
+  <body class="w-full flex flex-col justify-between bg-slate-400">
+    <nav class="flex px-12 items-center w-full h-14 bg-green-800 text-neutral-100">
+      <a
+        href="/"
+        class="px-3 py-1 border-2 bg-gray-500 border-black rounded-md transition-all hover:shadow-lg hover:shadow-red-500 text-xl"
+        >Home</a
+      >
+      <div class="mx-auto">
+        <a href="/signup">Sign up</a>
+        <a href="/login">Login</a>
+        <a href="/items">Items</a>
+        <a href="/users">Users</a>
+      </div>
+
+      <button>X</button>
+    </nav>
+  </body>
+</html>

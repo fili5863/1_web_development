@@ -1,0 +1,40 @@
+% include("_header.html", title="Sign up")
+
+<main>
+  <form
+    action="/users"
+    method="POST"
+    class="flex flex-col w-[250px] gap-2 bg-slate-400 p-3"
+  >
+    <div>
+      <label for="user_name">First name</label>
+      <input
+        class="bg-white"
+        name="user_name"
+        type="text"
+        placeholder="user name"
+      />
+    </div>
+    <div>
+      <label for="user_last_name">Last name</label>
+      <input
+        class="bg-white"
+        name="user_last_name"
+        type="text"
+        placeholder="user last name"
+      />
+    </div>
+    <div>
+      <label for="user_password">Password</label>
+      <input
+        class="bg-white"
+        name="user_password"
+        type="password"
+        placeholder="user password"
+      />
+    </div>
+    <button class="self-end bg-blue-600 text-white px-2 py-1">Save</button>
+  </form>
+</main>
+
+% include("_footer.html")

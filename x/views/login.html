@@ -1,0 +1,36 @@
+% import x
+<!--  -->
+% include("_header.html", title="Login")
+<h1>Login</h1>
+<div id="error"></div>
+<form
+  id="frm"
+  class="flex gap-2"
+>
+  <input
+    type="text"
+    name="user_email"
+    mix-check="{{x.USER_EMAIL_REGEX}}"
+    id=""
+  />
+  <input
+    type="text"
+    name="user_password"
+    mix-check="{{x.USER_PASSWORD_REGEX}}"
+    id=""
+  />
+  <button
+    mix-post="/login"
+    mix-data="#frm"
+    mix-wait="#loading"
+  >
+    Login
+  </button>
+  <button
+    class="hidden"
+    id="loading"
+  >
+    Loading...
+  </button>
+</form>
+% include("_footer.html")

@@ -1,0 +1,29 @@
+% include("_header.html", title="Items")
+
+<form id='frm' method='post'>
+    <label for="user_name">name</label>
+    <input name='user_name' type='text' mix-check='.{2,20}'>
+   <button mix-post="/users" mix-data='#frm'>Create user</button>
+  </form>
+
+<div
+  id="users"
+  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 pt-8"
+>
+  % for user in users:
+  <div id='user_{{user['user_pk']}}'
+    class="relative flex flex-col items-center justify-center border rounded-md  h-24
+    bg-white border-gray-700 p-2"
+  >
+    <a href="/users/{{user['user_pk']}}"><h1 class="text-xl">{{user["user_name"]}}</h1></a>
+    <button
+      class="absolute right-2 bottom-2 text-2xl"
+      mix-delete="/users/{{user['user_pk']}}"
+    >
+      🗑️
+    </button>
+  </div>
+  % end
+</div>
+
+% include("_footer.html")

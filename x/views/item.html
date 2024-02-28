@@ -1,0 +1,32 @@
+% include("_header.html", title=title)
+
+<form id="frm">
+  <label for="update_item_title">Title</label>
+  <input
+    id="update_item_input"
+    name="update_item_title"
+    type="text"
+    mix-check=".{2,20}"
+    value="{{item_title}}"
+  />
+  <input
+    class="appearance-none"
+    id="update_item_price_input"
+    name="update_item_price"
+    type="number"
+    mix-check=".{2,20}"
+    value="{{item_price}}"
+  />
+  <button
+    mix-put="/items/{{id}}"
+    mix-data="#frm"
+  >
+    Update item
+  </button>
+</form>
+
+<h1>Item ID: {{id}}</h1>
+<h1 id="the_item_title">ITEM NAME: {{item_title}}</h1>
+<h1 id="the_item_price">ITEM PRICE: {{item_price}}</h1>
+
+% include("_footer.html")
