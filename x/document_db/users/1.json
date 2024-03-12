@@ -1,0 +1,38 @@
+{
+  "id": "1",
+  "version": 1,
+  "name": "me",
+  "liked_products": [
+    {
+      "id": "P1",
+      "version": 2,
+      "name": "t-shirt",
+      "price": 10.1,
+      "liked_at": 1709719127
+    }
+  ],
+  "purchased_products": [
+    {
+      "id": "P1",
+      "version": 2,
+      "name": "t-shirt",
+      "price": 10.1,
+      "discount": 1.1,
+      "total_paid": 9,
+      "purchased_at": 1709719127
+    }
+  ],
+  "bookings": [
+    {
+      "id": "p1",
+      "version": 1,
+      "address": "property street",
+      "booked_at": 1709719127,
+      "price_pr_night": 70,
+      "nights": 4,
+      "total_paid": 280,
+      "check-in": 1709424000,
+      "check-out": 1709769600
+    }
+  ]
+}

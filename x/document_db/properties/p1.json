@@ -1,0 +1,20 @@
+{
+  "id": "p1",
+  "version": 1,
+  "address": "property street",
+  "description": "*slaps roof* this bad boy can fit so many people",
+  "price_pr_night": 70,
+  "bedrooms": 3,
+  "rating": 5,
+  "booked_by": [
+    {
+      "id": "1",
+      "version": 1,
+      "name": "me",
+      "booked_at": 1709719127,
+      "total_price": 280,
+      "check-in": 1709424000,
+      "check-out": 1709769600
+    }
+  ]
+}

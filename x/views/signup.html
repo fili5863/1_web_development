@@ -1,7 +1,51 @@
 % include("_header.html", title="Sign up")
+<!--  -->
+% import x
 
 <main>
+  <div id="message"></div>
   <form
+    id="frm_signup"
+    class="flex flex-col w-[250px] gap-2 bg-slate-400 p-3"
+  >
+    <div>
+      <label for="email">Email:</label>
+      <input
+        type="text"
+        name="user_email"
+        mix-check="{{x.USER_EMAIL_REGEX}}"
+      />
+    </div>
+    <div>
+      <label for="user_name">Userame</label>
+      <input
+        class="bg-white"
+        name="user_name"
+        type="text"
+        placeholder="user name"
+      />
+    </div>
+
+    <div>
+      <label for="user_password">Password</label>
+      <input
+        class="bg-white"
+        name="user_password"
+        type="text"
+        placeholder="user password"
+      />
+    </div>
+
+    <button
+      mix-post="/signup"
+      mix-data="#frm_signup"
+      type="button"
+      class="self-end bg-blue-600 text-white px-2 py-1"
+    >
+      Sign up
+    </button>
+  </form>
+  <!-- <form
     action="/users"
     method="POST"
     class="flex flex-col w-[250px] gap-2 bg-slate-400 p-3"
@@ -34,7 +78,7 @@
       />
     </div>
     <button class="self-end bg-blue-600 text-white px-2 py-1">Save</button>
-  </form>
+  </form> -->
 </main>
 
 % include("_footer.html")

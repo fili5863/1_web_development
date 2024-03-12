@@ -32,12 +32,14 @@ USER_NAME_MIN = 2
 USER_NAME_MAX = 20
 
 def validate_user_name():
+    user_name = request.forms.get("user_name", "")
+    user_name = user_name.strip()
     if len(request.forms.get("user_name")) < USER_NAME_MIN: 
         raise Exception("name too short")
     if len(request.forms.get("user_name")) > USER_NAME_MAX: 
         raise Exception("name too long")
     # SUCCESS
-    return "ok"
+    return user_name
 
 
 

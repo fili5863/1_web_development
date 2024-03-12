@@ -28,6 +28,7 @@ CREATE TABLE users(
     user_deleted_at         TEXT,
     user_email              TEXT UNIQUE,
     user_password           TEXT,
+    user_created_at         INTEGER,
     PRIMARY KEY(user_pk)
 ) WITHOUT ROWID;
 

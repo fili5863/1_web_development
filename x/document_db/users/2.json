@@ -1,0 +1,11 @@
+{
+  "id": "1",
+  "name": "Santiago",
+  "roles": ["teacher"],
+  "students": [
+    {
+      "id": "1",
+      "name": "Samuel"
+    }
+  ]
+}

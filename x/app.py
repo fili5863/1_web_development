@@ -36,6 +36,9 @@ import routes.create_item
 import routes.delete_item
 import routes.update_item
 
+############################## API
+import api_html.signup
+
 
 
 ############################## LOGIN

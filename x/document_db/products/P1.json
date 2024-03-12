@@ -1,0 +1,23 @@
+{
+  "id": "P1",
+  "version": 2,
+  "name": "t-shirt",
+  "price": 10.1,
+  "liked_by_users": [
+    {
+      "id": "1",
+      "version": 1,
+      "name": "me",
+      "liked_at": 1709719127
+    }
+  ],
+  "purchases_by_users": [
+    {
+      "id": "1",
+      "version": 1,
+      "name": "me",
+      "purchased_at": 1709719127,
+      "purchase_price": 9
+    }
+  ]
+}
