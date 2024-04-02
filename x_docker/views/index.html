@@ -1,0 +1,68 @@
+% include("_header.html", title="Welcome")
+
+<main class="p-3 max-w-4xl mx-auto flex flex-col gap-2">
+  <section id='frmSection' class="flex gap-3 p-3 w-full m-auto bg-blue-500 text-white">
+    <form
+      id="frm"
+      class="flex gap-3 p-3"
+    >
+      <label for="user_name">
+        First name
+        <input
+        class='text-black p-1 rounded-md'
+          name="user_name"
+          type="text"
+        />
+      </label>
+      <label for="user_last_name">
+        Last name
+        <input
+        class='text-black p-1 rounded-md'
+          name="user_last_name"
+          type="text"
+        />
+      </label>
+      <button
+      class='bg-transparent border-white border-2 px-3 hover:bg-white hover:text-blue-500 transition-all duration-75'
+        mix-data="#frm"
+        mix-post="/users"
+      >
+        Create user
+      </button>
+    </form>
+  </section>
+  <section id='userSection' class='flex flex-col gap-2'>
+    % for user in users:
+    <div class='flex p-3 justify-between align-middle bg-gray-200' id='user_{{user['_key']}}'
+      class="relative flex gap-3 items-center justify-center border rounded-md
+      bg-white border-gray-200 p-2"
+    >
+    <p class='text-blue-500 text-center'>{{user["_key"]}}</p>
+    <form id='editFrm_{{user['_key']}}' class='flex gap-3'>
+        <input 
+        class='text-black p-1 rounded-md' 
+        type="text" mix-put='/user/{{user['_key']}}' 
+        mix-blur 
+        mix-data='#editFrm_{{user["_key"]}}' 
+        name="user_name_change" 
+        value='{{user["user_name"]}}'/>
+        <input 
+        class='text-black p-1 rounded-md' 
+        type="text" 
+        mix-put='/user/{{user['_key']}}' 
+        mix-blur 
+        mix-data='#editFrm_{{user["_key"]}}'
+        name="user_last_name_change" 
+        value='{{user["user_last_name"]}}'/>
+    </form>
+    <button
+    mix-delete='/user/{{user['_key']}}'
+  >
+    🗑️
+  </button>
+    </div>
+    % end
+  </section>
+</main>
+
+% include("_footer.html")

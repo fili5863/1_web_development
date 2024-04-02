@@ -1,0 +1,73 @@
+% import x
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="/app.css"
+    />
+    <script
+      src="/mixhtml.js"
+      defer
+    ></script>
+    <style>
+            .mix-error {
+              border-color: tomato;
+      ;
+            }
+
+            .mix-hidden {
+              display: none;
+
+            }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Login</h1>
+    </header>
+    <main>
+      <section>
+        <form id="frm">
+          <div>
+            <label for="user_email">Email <span>(6 to 100 characters)</span></label>
+            <input
+              type="text"
+              name="user_email"
+              mix-check="{{x.USER_EMAIL_REGEX}}"
+              id=""
+            />
+          </div>
+          <div>
+            <label for="user_password">Password <span>(6 to 50 characters)</span></label>
+            <input
+              type="password"
+              name="user_password"
+              mix-check="{{x.USER_PASSWORD_REGEX}}"
+              id=""
+            />
+          </div>
+          <div id="error"></div>
+          <button
+            mix-post="/login"
+            mix-data="#frm"
+          >
+            Login
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer></footer>
+    <script>
+      const mix_replace_url = "/users"
+    </script>
+  </body>
+</html>
